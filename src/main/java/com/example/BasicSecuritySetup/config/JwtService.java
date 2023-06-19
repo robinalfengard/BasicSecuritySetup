@@ -29,7 +29,6 @@ public class JwtService {
         try {
             Configuration config = new Configurations().properties("src/main/resources/application.properties");
             secretKey = config.getString("secretKey");
-            System.out.println("Secret Key: " + secretKey);
         } catch (ConfigurationException e) {
             // Handle the exception if the configuration file cannot be loaded
             e.printStackTrace();
